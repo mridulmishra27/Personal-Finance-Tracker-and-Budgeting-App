@@ -1,7 +1,6 @@
 # 🏥 ClinicConnect
 
-Doctor Appointment Booking Website that allows patients to seamlessly schedule, manage, and track their medical appointments. To enhance user experience, I integrated AI-powered assistance using the Vercel AI SDK and Google’s Gemini 2.0 Flash model. The AI provides smart suggestions, answers patient queries, and simplifies the booking process with natural language interactions.
-This project helped me explore how AI can transform healthcare workflows, making doctor-patient interactions more accessible and efficient.
+A full-stack doctor appointment booking platform with AI-powered assistance for discovery and scheduling. The assistant uses the Vercel AI SDK with Google's Gemini 2.0 Flash to streamline common actions and answer patient queries.
 
 ## 📋 Table of Contents
 
@@ -32,28 +31,11 @@ This project helped me explore how AI can transform healthcare workflows, making
   - [Patient Interface](#patient-interface)
   - [Doctor Dashboard](#doctor-dashboard)
   - [Admin Panel](#admin-panel)
-- [🚀 Deployment](#-deployment)
-  - [Frontend Deployment](#frontend-deployment-vercel)
-  - [Backend Deployment](#backend-deployment-railwayheroku)
-  - [Environment Variables for Production](#environment-variables-for-production)
-- [🧪 Testing](#-testing)
-  - [Running Tests](#running-tests)
-  - [Test Coverage](#test-coverage)
-- [🐛 Troubleshooting](#-troubleshooting)
-  - [Common Issues](#common-issues)
-- [🤝 Contributing](#-contributing)
-  - [Development Guidelines](#development-guidelines)
-- [📝 Changelog](#-changelog)
-- [📄 License](#-license)
-- [👥 Team](#-team)
-- [🙏 Acknowledgments](#-acknowledgments)
-- [📞 Support](#-support)
-
 ---
 
 ## 🌟 Features
 
-### For Patients {#for-patients}
+### For Patients
 - **User Registration & Authentication** - Secure user accounts with JWT authentication
 - **Doctor Discovery** - Browse doctors by specialization (Cardiologist, Dermatologist, Neurologist, etc.)
 - **Appointment Booking** - Easy appointment scheduling with available time slots
@@ -62,21 +44,17 @@ This project helped me explore how AI can transform healthcare workflows, making
 - **Appointment Management** - View, cancel, and track appointment history
 - **Real-time Notifications** - Toast notifications for better user experience
 
-### For Doctors {#for-doctors}
+### For Doctors
 - **Doctor Dashboard** - Comprehensive overview of appointments and patient data
 - **Appointment Management** - View and manage patient appointments
 - **Profile Management** - Update professional information and availability
-- **Specialization Support** - Multiple medical specializations supported
-- **Availability Control** - Manage working hours and availability status
 
-### For Administrators {#for-administrators}
+### For Administrators
 - **Admin Dashboard** - Complete system overview and analytics
 - **Doctor Management** - Add, edit, and manage doctor profiles
 - **Appointment Oversight** - Monitor all appointments across the platform
-- **User Management** - Manage patient accounts and data
-- **System Analytics** - Track platform usage and performance
 
-### AI Integration {#ai-integration}
+### AI Integration
 - **Smart Chatbot** - Powered by Google Gemini 2.0 Flash model
 - **Natural Language Processing** - Understands appointment booking requests
 - **Intelligent Doctor Matching** - Suggests appropriate specialists based on queries
@@ -84,7 +62,7 @@ This project helped me explore how AI can transform healthcare workflows, making
 
 ## 🛠️ Technology Stack
 
-### Frontend {#frontend}
+### Frontend
 - **React 19.1.0** - Modern UI library
 - **Vite** - Fast build tool and development server
 - **Tailwind CSS** - Utility-first CSS framework
@@ -93,7 +71,7 @@ This project helped me explore how AI can transform healthcare workflows, making
 - **React Toastify** - Notification system
 - **Vercel AI SDK** - AI integration
 
-### Backend {#backend}
+### Backend
 - **Node.js** - JavaScript runtime
 - **Express.js** - Web application framework
 - **MongoDB** - NoSQL database
@@ -104,7 +82,7 @@ This project helped me explore how AI can transform healthcare workflows, making
 - **Multer** - File upload handling
 - **Google AI SDK** - AI model integration
 
-### AI & External Services {#ai--external-services}
+### AI & External Services
 - **Google Gemini 2.0 Flash** - AI language model
 - **Vercel AI SDK** - AI integration framework
 - **Cloudinary** - Cloud-based image management
@@ -174,18 +152,18 @@ ClinicConnect-AI Integrated Doctor Appointment Booking/
 
 ## 🚀 Getting Started
 
-### Prerequisites {#prerequisites}
+### Prerequisites
 - Node.js (v16 or higher)
 - MongoDB (local or cloud instance)
 - Google AI API key
 - Cloudinary account
 
-### Installation {#installation}
+### Installation
 
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd "ClinicConnect AI Integrated using Vercel AI"
+   cd "ClinicConnect-AI Integrated Doctor Appointment Booking"
    ```
 
 2. **Install Backend Dependencies**
@@ -214,12 +192,12 @@ ClinicConnect-AI Integrated Doctor Appointment Booking/
    MONGODB_URI=your_mongodb_connection_string
    JWT_SECRET=your_jwt_secret_key
    GOOGLE_GENERATIVE_AI_API_KEY=your_google_ai_api_key
-   CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+   CLOUDINARY_derabg1ql=your_cloudinary_derabg1ql
    CLOUDINARY_API_KEY=your_cloudinary_api_key
    CLOUDINARY_API_SECRET=your_cloudinary_api_secret
    ```
 
-### Running the Application {#running-the-application}
+### Running the Application
 
 1. **Start the Backend Server**
    ```bash
@@ -244,27 +222,27 @@ ClinicConnect-AI Integrated Doctor Appointment Booking/
 
 ## 📚 API Endpoints
 
-### User Routes (`/api/user`) {#user-routes-apiuser}
+### User Routes (`/api/user`)
 - `POST /register` - User registration
 - `POST /login` - User login
 - `POST /update-profile` - Update user profile
 - `POST /book-appointment` - Book appointment
 - `GET /appointments` - Get user appointments
 
-### Doctor Routes (`/api/doctor`) {#doctor-routes-apidoctor}
+### Doctor Routes (`/api/doctor`)
 - `GET /list` - Get all doctors
 - `POST /login` - Doctor login
 - `GET /appointments` - Get doctor appointments
 - `POST /profile` - Update doctor profile
 
-### Admin Routes (`/api/admin`) {#admin-routes-apiadmin}
+### Admin Routes (`/api/admin`)
 - `POST /add-doc` - Add new doctor
 - `POST /log-admin` - Admin login
 - `GET /dashboard` - Admin dashboard data
 - `GET /doctors` - Get all doctors
 - `GET /appointments` - Get all appointments
 
-### AI Routes (`/api/ai`) {#ai-routes-apiai}
+### AI Routes (`/api/ai`)
 - `POST /chat` - AI chatbot interaction
 
 ## 🤖 AI Chatbot Features
@@ -274,7 +252,6 @@ The integrated AI chatbot provides:
 - **Appointment Booking** - Natural language appointment scheduling
 - **Appointment Management** - Cancel or modify existing appointments
 - **General Queries** - Answer healthcare-related questions
-- **Navigation Assistance** - Guide users to relevant pages
 
 ## 🎨 UI/UX Features
 
@@ -303,52 +280,53 @@ The application is fully responsive and optimized for:
 
 ## 🖼️ Screenshots
 
-### Patient Interface {#patient-interface}
+### Patient Interface
 
 #### Landing Page
-![Landing Page](./screenshots/landing-page.png)
+![Landing Page](https://res.cloudinary.com/derabg1ql/image/upload/v1758640403/landing-page_qc62vq.png)
 *Clean and modern landing page with doctor search functionality*
 
 #### Doctor Search & Filtering
-![Doctor Search](./screenshots/doctor-search.png)
+![Doctor Search](https://res.cloudinary.com/derabg1ql/image/upload/v1758640402/doctor-search_nyutxj.png)
 *Advanced search and filtering options for finding the right specialist*
 
 #### Appointment Booking
-![Appointment Booking](./screenshots/appointment-booking.png)
+![Appointment Booking](https://res.cloudinary.com/derabg1ql/image/upload/v1758640368/appointment-booking_fcaipr.png)
 *Streamlined appointment booking process with time slot selection*
 
 #### AI Chatbot Integration
-![AI Chatbot](./screenshots/ai-chatbot.png)
+![AI Chatbot](https://res.cloudinary.com/derabg1ql/image/upload/v1758640371/ai-chatbot_mncjvr.png)
 *Intelligent AI assistant powered by Google Gemini 2.0 Flash*
 
 #### User Profile Management
-![User Profile](./screenshots/user-profile.png)
+![User Profile](https://res.cloudinary.com/derabg1ql/image/upload/v1758640405/user-profile_x8etgv.png)
 *Comprehensive profile management with medical history*
 
-![User Profile](./screenshots/user-appointments.png)
+![User Appointments](https://res.cloudinary.com/derabg1ql/image/upload/v1758640386/user-appointments_buqqxr.png)
 
-### Doctor Dashboard {#doctor-dashboard}
+
+### Doctor Dashboard
 
 #### Doctor Dashboard Overview
-![Doctor Dashboard](./screenshots/doctor-dashboard.png)
+![Doctor Dashboard](https://res.cloudinary.com/derabg1ql/image/upload/v1758640370/doctor-dashboard_aiyykk.png)
 *Comprehensive dashboard showing appointments and patient data*
 
 #### Appointment Management
-![Appointment Management](./screenshots/doctor-appointments.png)
+![Appointment Management](https://res.cloudinary.com/derabg1ql/image/upload/v1758640369/doctor-appointments_s2qzp4.png)
 *Easy appointment management with patient details*
 
-#### Doctor Profile Settings
-![Doctor Profile](./screenshots/doctor-profile.png)
+#### Doctor Profile
+![Doctor Profile](https://res.cloudinary.com/derabg1ql/image/upload/v1758640385/doctor-profile_swsebs.png)
 *Professional profile management for doctors*
 
-### Admin Panel {#admin-panel}
+### Admin Panel
 
 #### Admin Dashboard
-![Admin Dashboard](./screenshots/admin-dashboard.png)
+![Admin Dashboard](https://res.cloudinary.com/derabg1ql/image/upload/v1758640363/admin-dashboard_wrh5fn.png)
 *Complete system overview with analytics and metrics*
 
 #### Doctor Management
-![Doctor Management](./screenshots/admin-doctors.png)
+![Doctor Management](https://res.cloudinary.com/derabg1ql/image/upload/v1758640386/admin-doctors_icotow.png)
 *Add, edit, and manage doctor profiles*
 
 <div align="center">
