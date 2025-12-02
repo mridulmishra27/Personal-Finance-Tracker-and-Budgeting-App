@@ -47,7 +47,7 @@ const Login = () => {
   }, [usertoken])
 
   return (
-    <div className="rounded-3xl min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200">
+    <div className="rounded-3xl flex items-center justify-center bg-gradient-to-br from-blue-100 to-purple-200 py-12">
       <form
         onSubmit={onSubmitHandler}
         className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md"

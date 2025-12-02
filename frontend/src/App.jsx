@@ -1,38 +1,30 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import MyAppointments from './pages/MyAppointments'
-import Appointments from './pages/Appointments'
-import About from './pages/About'
-import Doctors from './pages/Doctors'
-import Contact from './pages/Contact'
 import Profile from './pages/Profile'
 import Login from './pages/Login'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import AIChatbot from './components/AIChatbot'
+import Sidebar from './components/Sidebar'
+import Header from './components/Header'
 
 const App = () => {
   return (
-    <div className='mx-4 sm:mx-[10%]'>
+    <div className='min-h-screen bg-[#0a0f1d]'>
       <ToastContainer />
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/doctors' element={<Doctors />}/>
-        <Route path='/doctors/:expertise' element={<Doctors />}/>
-        <Route path='/contact' element={<Contact />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/appointments' element={<Appointments />} />
-        <Route path='/my-appointments' element={<MyAppointments />} />
-        <Route path='/appointments/:docid' element={<Appointments />} />
-      </Routes>
-      <AIChatbot />
-      <Footer />
+      <Sidebar />
+      <div className='ml-64 min-h-screen'>
+        <div className='p-6'>
+          <Header />
+          <div className='mt-6'>
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/profile' element={<Profile />} />
+            </Routes>
+          </div>
+        </div>
+      </div>
     </div>
   )
 }

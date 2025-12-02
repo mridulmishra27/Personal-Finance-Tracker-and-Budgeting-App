@@ -1,5 +1,4 @@
 import { createContext, useEffect, useState } from "react";
-// import { doctors } from "../assets/assets";
 import axios from "axios";
 import { toast } from "react-toastify";
 
@@ -10,22 +9,8 @@ const AppContextProvider = (props) => {
   const backend = import.meta.env.VITE_BACKEND_URL;
 
   const [usertoken, setUserToken] = useState(localStorage.getItem('usertoken') ? localStorage.getItem('usertoken') : false);
-  const [doctors, setDoctors] = useState([]);
   const [userData, setUserData] = useState(false)
 
-  const getDoctorsData = async () => {
-    try {
-      const { data } = await axios.get(backend + "/api/doctor/list");
-      if (data.success) {
-        setDoctors(data.doctors);
-      } else {
-        toast.error(data.message);
-      }
-    } catch (error) {
-      console.log(error);
-      toast.error(error.message);
-    }
-  };
 
   const profileData = async () => {
     try {
@@ -42,7 +27,6 @@ const AppContextProvider = (props) => {
   }
 
   const value = {
-    doctors, getDoctorsData,
     currency,
     usertoken,
     setUserToken,
@@ -51,9 +35,6 @@ const AppContextProvider = (props) => {
     profileData
   };
 
-  useEffect(() => {
-    getDoctorsData();
-  }, []);
 
   useEffect(() => {
     if (usertoken) {

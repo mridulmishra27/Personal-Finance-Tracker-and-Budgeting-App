@@ -91,7 +91,7 @@ const Profile = () => {
             <p className="text-gray-900">{userData.email}</p> {/* FIX 2 */}
           </div>
 
-          <div>
+          {/* <div>
             <p className="font-semibold text-gray-700">Phone:</p>
             {edit ? (
               <input
@@ -105,45 +105,7 @@ const Profile = () => {
             ) : (
               <p className="text-gray-900">{userData.phone}</p> // FIX 2
             )}
-          </div>
-
-          <div className="md:col-span-2">
-            <p className="font-semibold text-gray-700">Address:</p>
-            {edit ? (
-              <div className="space-y-2">
-                <input
-                  type="text"
-                  value={userData.address.line1} // FIX 2
-                  onChange={(e) =>
-                    setUserData((prev) => ({
-                      ...prev,
-                      address: { ...prev.address, line1: e.target.value },
-                    })) // FIX 2
-                  }
-                  className="w-full border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                  placeholder="Address Line 1"
-                />
-                <input
-                  type="text"
-                  value={userData.address.line2} // FIX 2
-                  onChange={(e) =>
-                    setUserData((prev) => ({
-                      ...prev,
-                      address: { ...prev.address, line2: e.target.value },
-                    })) // FIX 2
-                  }
-                  className="w-full border rounded px-2 py-1 focus:outline-none focus:ring-2 focus:ring-purple-400"
-                  placeholder="Address Line 2"
-                />
-              </div>
-            ) : (
-              <p className="text-gray-900 whitespace-pre-line">
-                {userData.address.line1} {/* FIX 2 */}
-                {'\n'}
-                {userData.address.line2} {/* FIX 2 */}
-              </p>
-            )}
-          </div>
+          </div> */}
         </div>
       </section>
 
