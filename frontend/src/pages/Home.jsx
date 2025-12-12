@@ -1,16 +1,22 @@
 import React from 'react'
-import Header from '../components/Header'
-import Expertise from '../components/Expertise'
-import TopDoctors from '../components/TopDoctors'
-import Banner from '../components/Banner'
+import StatsCards from '../components/Statscards.jsx'
+import SpendingOverview from '../components/SpendingOverview'
+import BudgetStatus from '../components/BudgetStatus'
 
 const Home = () => {
   return (
-    <div>
-      <Header />
-      <Expertise />
-      <TopDoctors />
-      <Banner />
+    <div className="space-y-6">
+      {/* Top Section - Financial Overview Cards */}
+      <StatsCards />
+      
+      {/* Bottom Section - Two Column Layout */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        {/* Left Column - Spending Overview */}
+        <SpendingOverview />
+        
+        {/* Right Column - Budget Status */}
+        <BudgetStatus />
+      </div>
     </div>
   )
 }
